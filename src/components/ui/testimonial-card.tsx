@@ -14,13 +14,20 @@ export default function TestimonialCard({
   className = '',
 }: TestimonialCardProps) {
   return (
-    <div className={`bg-moss-olive/20 p-8 rounded-lg ${className}`}>
-      <blockquote className="text-xl italic">
-        "{quote}"
+    <div className={`testimonial-card ${className}`}>
+      <blockquote className="text-xl md:text-2xl font-light leading-relaxed mb-8 tracking-wide">
+        {quote}
       </blockquote>
-      <p className="mt-4 text-right">
-        — {author}{relation ? `, ${relation}` : ''}
-      </p>
+      <div className="flex items-center justify-center mt-8">
+        <div className="h-px w-8 bg-terracotta/40 mr-4"></div>
+        <div className="text-center">
+          <p className="font-medium tracking-wide text-forest-charcoal">{author}</p>
+          {relation && (
+            <p className="text-sm uppercase tracking-wider text-forest-charcoal/60 mt-1">{relation}</p>
+          )}
+        </div>
+        <div className="h-px w-8 bg-terracotta/40 ml-4"></div>
+      </div>
     </div>
   );
 }

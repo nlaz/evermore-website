@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 26, 26, 26;
-  --background-rgb: 249, 247, 242;
+  --background-rgb: 255, 255, 255;
 }
 
 html {
@@ -15,6 +15,9 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 @layer base {
@@ -29,44 +32,44 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-moss-olive text-soft-ivory px-6 py-3 rounded-lg transition-all shadow-lg;
+    @apply bg-moss-olive text-soft-ivory px-6 py-3 transition-all;
   }
   
   .btn-primary:hover {
-    @apply bg-forest-charcoal transform -translate-y-1 shadow-xl;
+    @apply bg-forest-charcoal;
   }
   
   .btn-outline {
-    @apply border border-moss-olive text-moss-olive px-6 py-3 rounded-lg transition-all shadow-lg;
+    @apply border border-soft-ivory text-soft-ivory px-6 py-3 transition-all;
   }
   
   .btn-outline:hover {
-    @apply bg-moss-olive/10 transform -translate-y-1 shadow-xl;
+    @apply bg-soft-ivory/10;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-10;
   }
   
-  /* Modern animations */
+  /* Squarespace-style animations */
   .fade-in {
     animation: fadeIn 1s ease-in-out;
   }
   
   .fade-in-up {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 0.8s ease-out;
   }
   
   .slide-in-left {
-    animation: slideInLeft 1s ease-out;
+    animation: slideInLeft 0.8s ease-out;
   }
   
   .slide-in-right {
-    animation: slideInRight 1s ease-out;
+    animation: slideInRight 0.8s ease-out;
   }
   
   .zoom-in {
-    animation: zoomIn 1s ease-out;
+    animation: zoomIn 0.8s ease-out;
   }
 }
 
@@ -89,7 +92,7 @@ body {
 @keyframes fadeInUp {
   from { 
     opacity: 0; 
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to { 
     opacity: 1;
@@ -100,7 +103,7 @@ body {
 @keyframes slideInLeft {
   from { 
     opacity: 0; 
-    transform: translateX(-50px);
+    transform: translateX(-20px);
   }
   to { 
     opacity: 1;
@@ -111,7 +114,7 @@ body {
 @keyframes slideInRight {
   from { 
     opacity: 0; 
-    transform: translateX(50px);
+    transform: translateX(20px);
   }
   to { 
     opacity: 1;
@@ -122,7 +125,7 @@ body {
 @keyframes zoomIn {
   from { 
     opacity: 0; 
-    transform: scale(0.95);
+    transform: scale(0.98);
   }
   to { 
     opacity: 1;

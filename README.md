@@ -30,6 +30,7 @@ bun run dev
 - `/src/app` - Next.js app router pages
 - `/src/components` - Reusable components
 - `/src/styles` - Global styles
+- `/src/utils` - Utility functions
 - `/public` - Static assets
 
 ### Build
@@ -46,3 +47,25 @@ The website follows Evermore's brand guidelines with:
 - Typography: Mortuary (headings) and Inter (body text)
 - Colors: Ink Black, Forest Charcoal, Moss Olive, Soft Ivory
 - Design principles: timeless, reverent, minimal, intimate
+
+### Testing
+
+#### Development Testing Tools
+
+The project includes built-in testing tools:
+
+1. Access the testing dashboard: [http://localhost:3000/testing](http://localhost:3000/testing)
+2. Use the test plan in `test-plan.md` for cross-browser and device testing
+3. Run Lighthouse performance tests using the guide in `lighthouse-testing.md`
+
+#### Testing Scripts
+```bash
+# Run linting
+bun run lint
+
+# Run type checking
+bun run typecheck
+
+# Run tests
+bun run test
+```

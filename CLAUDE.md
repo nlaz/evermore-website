@@ -39,3 +39,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Optimize images with Next.js Image component
 - Implement SEO best practices with metadata
 - Maintain calm, respectful whitespace in layouts
+
+## Testing Guidelines
+- Cross-browser testing: Chrome, Firefox, Safari, Edge
+- Device testing: Desktop, Tablet (iPad), Mobile (iPhone, Android)
+- Accessibility: Use axe-core for automated testing
+- Performance: Use Lighthouse for performance audits
+- User flow validation: Test all key user journeys

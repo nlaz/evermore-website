@@ -1,18 +1,17 @@
 import './globals.css';
-import { Inter, UnifrakturMaguntia } from 'next/font/google';
+import { Jost, Cinzel } from 'next/font/google';
 import type { Metadata } from 'next';
 import FeedbackWidget from '@/components/feedback/feedback-widget';
 
-// Load Inter font for body text
-const inter = Inter({
+// Load Jost font for body text
+const inter = Jost({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 });
 
-// Load UnifrakturMaguntia as Gothic serif font for headings
-const mortuary = UnifrakturMaguntia({
-  weight: '400',
+// Load Cinzel as elegant serif font for headings
+const mortuary = Cinzel({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mortuary',

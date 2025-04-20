@@ -28,40 +28,46 @@ export default function Home() {
       <Navbar />
       
       {/* Hero section */}
-      <section className="w-full bg-soft-ivory py-20 md:py-32">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-mortuary mb-6">Honoring legacies with lasting love.</h1>
+      <section className="w-full h-screen flex items-center justify-center bg-cover bg-center relative" style={{ backgroundImage: 'linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url("/images/hero-bg.jpg")' }}>
+        <div className="absolute inset-0 bg-ink-black/30 z-0"></div>
+        <div className="container-custom text-center relative z-10 text-soft-ivory">
+          <h1 className="text-5xl md:text-7xl font-mortuary mb-8">Honoring legacies with lasting love.</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-12">Holistic funeral planning that frees you to grieve, reflect, and heal.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button href="/consultation" variant="primary" size="lg">Schedule Your Free Consultation</Button>
-            <Button href="/resources/family-guide" variant="outline" size="lg">Download Our Family Support Guide</Button>
+            <Button href="/resources/family-guide" variant="outline" size="lg" className="border-soft-ivory text-soft-ivory hover:bg-soft-ivory/20">Download Our Family Support Guide</Button>
           </div>
+        </div>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-soft-ivory" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
       
       {/* Why Evermore section */}
-      <section id="why-evermore" className="w-full bg-forest-charcoal text-soft-ivory py-20">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-mortuary mb-10 text-center">Why Evermore</h2>
-          <p className="text-xl max-w-4xl mx-auto text-center mb-16">
+      <section id="why-evermore" className="w-full min-h-screen flex items-center bg-cover bg-fixed bg-center text-soft-ivory relative" style={{ backgroundImage: 'linear-gradient(rgba(46, 47, 44, 0.85), rgba(46, 47, 44, 0.95)), url("/images/why-bg.jpg")' }}>
+        <div className="container-custom py-24">
+          <h2 className="text-4xl md:text-6xl font-mortuary mb-10 text-center">Why Evermore</h2>
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto text-center mb-16">
             We're your partner, not your salesperson. From our first conversation through life's most tender moments, 
             we stand beside you with compassion, clarity, and respect.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-forest-charcoal/50 p-8 rounded-lg">
+            <div className="backdrop-blur-sm bg-forest-charcoal/30 p-8 rounded-lg transition-all duration-300 hover:bg-forest-charcoal/50 hover:transform hover:scale-105">
               <h3 className="text-2xl font-mortuary mb-4">Empathy‑First</h3>
               <p>We listen deeply, offering calm guidance at every step.</p>
             </div>
-            <div className="bg-forest-charcoal/50 p-8 rounded-lg">
+            <div className="backdrop-blur-sm bg-forest-charcoal/30 p-8 rounded-lg transition-all duration-300 hover:bg-forest-charcoal/50 hover:transform hover:scale-105">
               <h3 className="text-2xl font-mortuary mb-4">Vendor‑Neutral</h3>
               <p>Your choices matter. We recommend only what aligns with your values.</p>
             </div>
-            <div className="bg-forest-charcoal/50 p-8 rounded-lg">
+            <div className="backdrop-blur-sm bg-forest-charcoal/30 p-8 rounded-lg transition-all duration-300 hover:bg-forest-charcoal/50 hover:transform hover:scale-105">
               <h3 className="text-2xl font-mortuary mb-4">Culturally Fluent</h3>
               <p>Whether it's a traditional janazah, a Jewish tahara, or a hybrid celebration-of-life, we honor your rituals.</p>
             </div>
-            <div className="bg-forest-charcoal/50 p-8 rounded-lg">
+            <div className="backdrop-blur-sm bg-forest-charcoal/30 p-8 rounded-lg transition-all duration-300 hover:bg-forest-charcoal/50 hover:transform hover:scale-105">
               <h3 className="text-2xl font-mortuary mb-4">Post‑Funeral Care</h3>
               <p>When the service ends, our support continues—from paperwork to meal trains.</p>
             </div>
@@ -71,80 +77,163 @@ export default function Home() {
             quote="Evermore allowed us to focus on one another. They handled everything with grace."
             author="Maria R."
             relation="Daughter"
-            className="mt-16 max-w-3xl mx-auto"
+            className="mt-16 max-w-3xl mx-auto backdrop-blur-sm bg-soft-ivory/10 border border-soft-ivory/20"
           />
         </div>
       </section>
       
       {/* How It Works section */}
-      <section id="how-it-works" className="w-full bg-soft-ivory py-20">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-mortuary mb-10 text-center">How It Works</h2>
+      <section id="how-it-works" className="w-full min-h-screen flex items-center bg-soft-ivory relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-1/3 h-full bg-moss-olive/10 transform -skew-x-12"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-full bg-moss-olive/10 transform skew-x-12"></div>
+        
+        <div className="container-custom py-24 relative z-10">
+          <h2 className="text-4xl md:text-6xl font-mortuary mb-16 text-center">How It Works</h2>
           
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="bg-moss-olive text-soft-ivory w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">1</div>
+          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div className="text-center backdrop-blur-sm bg-white/60 p-8 rounded-xl shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="bg-moss-olive text-soft-ivory w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 text-2xl font-bold">1</div>
               <h3 className="text-2xl font-mortuary mb-4">Consult & Customize</h3>
-              <p>We begin by listening—understanding your wishes, values, and traditions.</p>
+              <p className="text-lg">We begin by listening—understanding your wishes, values, and traditions.</p>
             </div>
-            <div className="text-center">
-              <div className="bg-moss-olive text-soft-ivory w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">2</div>
+            <div className="text-center backdrop-blur-sm bg-white/60 p-8 rounded-xl shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 md:mt-12">
+              <div className="bg-moss-olive text-soft-ivory w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 text-2xl font-bold">2</div>
               <h3 className="text-2xl font-mortuary mb-4">Plan & Coordinate</h3>
-              <p>We manage logistics, vendors, and all day‑of details so you can rest.</p>
+              <p className="text-lg">We manage logistics, vendors, and all day‑of details so you can rest.</p>
             </div>
-            <div className="text-center">
-              <div className="bg-moss-olive text-soft-ivory w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">3</div>
+            <div className="text-center backdrop-blur-sm bg-white/60 p-8 rounded-xl shadow-lg transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="bg-moss-olive text-soft-ivory w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 text-2xl font-bold">3</div>
               <h3 className="text-2xl font-mortuary mb-4">Support & Heal</h3>
-              <p>We guide paperwork, meal trains, and emotional care—long after the service is over.</p>
+              <p className="text-lg">We guide paperwork, meal trains, and emotional care—long after the service is over.</p>
             </div>
           </div>
           
-          <div className="text-center mt-16">
-            <Button href="/consultation" variant="primary">Get Started</Button>
+          <div className="text-center mt-20">
+            <Button href="/consultation" variant="primary" size="lg" className="px-12 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">Get Started</Button>
           </div>
         </div>
       </section>
       
       {/* Services section */}
-      <section id="services" className="w-full bg-forest-charcoal text-soft-ivory py-20">
+      <section id="services" className="w-full min-h-screen flex items-center bg-cover bg-center text-soft-ivory py-24" style={{ backgroundImage: 'linear-gradient(rgba(26, 26, 26, 0.9), rgba(46, 47, 44, 0.9)), url("/images/services-bg.jpg")' }}>
         <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-mortuary mb-10 text-center">Services & Packages</h2>
-          <p className="text-xl max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-mortuary mb-10 text-center">Services & Packages</h2>
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto text-center mb-16">
             Choose the support that fits your family. All packages are transparent, vendor‑neutral, and customizable.
           </p>
           
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px] border-collapse">
-              <thead className="border-b border-soft-ivory/20">
-                <tr>
-                  <th scope="col" className="text-left py-4 px-4 font-mortuary">Package</th>
-                  <th scope="col" className="text-left py-4 px-4 font-mortuary">What's Included</th>
-                  <th scope="col" className="text-right py-4 px-4 font-mortuary">Starting Fee*</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-soft-ivory/10">
-                  <td className="py-4 px-4 font-medium">Consulting Only</td>
-                  <td className="py-4 px-4">Expert guidance, planning templates, vendor lists</td>
-                  <td className="py-4 px-4 text-right">$1,500</td>
-                </tr>
-                <tr className="border-b border-soft-ivory/10">
-                  <td className="py-4 px-4 font-medium">Day‑of Coordination</td>
-                  <td className="py-4 px-4">Full event management, on‑site support</td>
-                  <td className="py-4 px-4 text-right">$3,500</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4 font-medium">Full‑Service + Post‑Funeral Support</td>
-                  <td className="py-4 px-4">End‑to‑end planning, execution, and follow‑up care</td>
-                  <td className="py-4 px-4 text-right">$5,500</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="backdrop-blur-sm bg-forest-charcoal/40 p-8 rounded-xl border border-soft-ivory/10 transition-all duration-300 hover:bg-forest-charcoal/60 hover:transform hover:scale-105 hover:shadow-2xl">
+              <h3 className="text-2xl font-mortuary mb-2 text-center">Consulting Only</h3>
+              <div className="text-center mb-6">
+                <span className="text-3xl font-bold">$1,500</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Expert guidance</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Planning templates</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Vendor recommendations</span>
+                </li>
+              </ul>
+              <div className="mt-8 text-center">
+                <Button href="/consultation" variant="outline" className="border-soft-ivory/60 hover:bg-soft-ivory/10">Learn More</Button>
+              </div>
+            </div>
+            
+            <div className="backdrop-blur-sm bg-moss-olive/40 p-8 rounded-xl border border-soft-ivory/10 transition-all duration-300 hover:bg-moss-olive/60 hover:transform hover:scale-105 hover:shadow-2xl transform scale-105 z-10">
+              <div className="text-center mb-3">
+                <span className="px-4 py-1 bg-soft-ivory text-forest-charcoal text-sm rounded-full font-medium">Most Popular</span>
+              </div>
+              <h3 className="text-2xl font-mortuary mb-2 text-center">Day‑of Coordination</h3>
+              <div className="text-center mb-6">
+                <span className="text-3xl font-bold">$3,500</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-soft-ivory mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Full event management</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-soft-ivory mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>On‑site support</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-soft-ivory mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Vendor coordination</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-soft-ivory mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Guest management</span>
+                </li>
+              </ul>
+              <div className="mt-8 text-center">
+                <Button href="/consultation" variant="primary">Select This Package</Button>
+              </div>
+            </div>
+            
+            <div className="backdrop-blur-sm bg-forest-charcoal/40 p-8 rounded-xl border border-soft-ivory/10 transition-all duration-300 hover:bg-forest-charcoal/60 hover:transform hover:scale-105 hover:shadow-2xl">
+              <h3 className="text-2xl font-mortuary mb-2 text-center">Full‑Service Support</h3>
+              <div className="text-center mb-6">
+                <span className="text-3xl font-bold">$5,500</span>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>End‑to‑end planning</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Event execution</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Post‑funeral care</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-moss-olive mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Administrative support</span>
+                </li>
+              </ul>
+              <div className="mt-8 text-center">
+                <Button href="/consultation" variant="outline" className="border-soft-ivory/60 hover:bg-soft-ivory/10">Learn More</Button>
+              </div>
+            </div>
           </div>
           
-          <p className="text-center mt-8 italic">
-            <span className="font-medium">Custom Add‑Ons:</span> obituary writing • digital tributes • death certificate processing • meal‑train coordination
-          </p>
+          <div className="text-center mt-16 backdrop-blur-sm bg-soft-ivory/10 p-6 rounded-xl max-w-4xl mx-auto border border-soft-ivory/20">
+            <p className="text-xl">
+              <span className="font-medium">Custom Add‑Ons:</span> obituary writing • digital tributes • death certificate processing • meal‑train coordination
+            </p>
+          </div>
         </div>
       </section>
       

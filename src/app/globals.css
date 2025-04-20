@@ -7,9 +7,14 @@
   --background-rgb: 249, 247, 242;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -24,20 +29,103 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-moss-olive text-soft-ivory px-6 py-3 rounded-lg transition-all;
+    @apply bg-moss-olive text-soft-ivory px-6 py-3 rounded-lg transition-all shadow-lg;
   }
   
   .btn-primary:hover {
-    @apply bg-forest-charcoal;
+    @apply bg-forest-charcoal transform -translate-y-1 shadow-xl;
+  }
+  
+  .btn-outline {
+    @apply border border-moss-olive text-moss-olive px-6 py-3 rounded-lg transition-all shadow-lg;
+  }
+  
+  .btn-outline:hover {
+    @apply bg-moss-olive/10 transform -translate-y-1 shadow-xl;
   }
   
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Modern animations */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .zoom-in {
+    animation: zoomIn 1s ease-out;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .bg-blur {
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
   }
 }

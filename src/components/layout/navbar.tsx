@@ -5,40 +5,81 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const navLinks = [
-  { href: '#why-evermore', label: 'Why Evermore' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#services', label: 'Services' },
-  { href: '#about', label: 'About' },
+  { href: '#what-we-do', label: 'What We Do' },
+  { href: '#about', label: 'About Us' },
+  { href: '#offerings', label: 'Offerings' },
   { href: '#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      const scrollY = window.scrollY;
+      // Define the scroll threshold where animation completes (in pixels)
+      const scrollThreshold = 150;
+      // Calculate progress from 0 to 1, clamped between 0 and 1
+      const progress = Math.min(scrollY / scrollThreshold, 1);
+      setScrollProgress(progress);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    // Initial calls
+    handleScroll();
+    handleResize();
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleResize, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [scrolled]);
+  }, []);
+
+  // Calculate interpolated values based on scroll progress
+  const bgOpacity = scrollProgress * 0.95;
+  const borderOpacity = scrollProgress * 0.1;
+  const shadowOpacity = scrollProgress * 0.2;
+  
+  // Interpolate blur with easing: subtle at start, more prevalent at end
+  // Using cubic ease-in (scrollProgress^3) for gradual start and accelerated end
+  const easedBlurProgress = scrollProgress * scrollProgress * scrollProgress;
+  const blurAmount = easedBlurProgress * 4;
+  
+  // Interpolate padding: from pt-20/pt-24 pb-6 to py-4
+  // Mobile: pt-20 (80px) to py-4 (16px top)
+  // Desktop: pt-24 (96px) to py-4 (16px top)
+  // Bottom padding stays at 6 (24px) when at top, goes to 4 (16px) when scrolled
+  const mobileTopPadding = 80 - (scrollProgress * (80 - 16));
+  const desktopTopPadding = 96 - (scrollProgress * (96 - 16));
+  const bottomPadding = 24 - (scrollProgress * (24 - 16));
+  
+  // Interpolate logo scale: from scale-100 (1) to scale-90 (0.9)
+  const logoScale = 1 - (scrollProgress * 0.1);
 
   return (
-    <nav className={`w-full fixed top-0 z-50 transition-all duration-700 ease-out ${
-      scrolled
-        ? 'bg-charred-plum/95 backdrop-blur-sm border-b border-pale-stone/10 shadow-lg shadow-charred-plum/20'
-        : 'bg-transparent'
-    }`}>
-      <div className={`container-custom flex items-center justify-between transition-all duration-700 ease-out ${
-        scrolled ? 'py-4' : 'pt-12 md:pt-16 pb-6'
-      }`}>
+    <nav 
+      className="w-full fixed top-0 z-50"
+      style={{
+        backgroundColor: scrollProgress > 0 ? `rgba(54, 38, 48, ${bgOpacity})` : 'transparent',
+        backdropFilter: blurAmount > 0 ? `blur(${blurAmount}px)` : 'none',
+        borderBottom: scrollProgress > 0 ? `1px solid rgba(51, 62, 78, ${borderOpacity})` : 'none',
+        boxShadow: scrollProgress > 0 ? `0 10px 15px -3px rgba(54, 38, 48, ${shadowOpacity}), 0 4px 6px -2px rgba(54, 38, 48, ${shadowOpacity})` : 'none',
+      }}
+    >
+      <div 
+        className="container-custom flex items-center justify-between"
+        style={{
+          paddingTop: isDesktop ? `${desktopTopPadding}px` : `${mobileTopPadding}px`,
+          paddingBottom: `${bottomPadding}px`,
+        }}
+      >
         <Link href="/" aria-label="Evermore Home" className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
           <Image
@@ -47,10 +88,12 @@ export default function Navbar() {
             width={220}
             height={60}
             priority
-            className={`h-auto relative transition-all duration-700 ease-out ${
-              scrolled ? 'scale-90' : 'scale-100'
-            }`}
-            style={{ filter: 'brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(378%) hue-rotate(350deg) brightness(97%) contrast(86%)' }}
+            className="h-auto relative"
+            style={{ 
+              filter: 'brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(378%) hue-rotate(350deg) brightness(97%) contrast(86%)',
+              transform: `scale(${logoScale})`,
+              transformOrigin: 'left center',
+            }}
           />
         </Link>
         

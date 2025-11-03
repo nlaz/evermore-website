@@ -1,6 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import FeedbackWidget from '@/components/feedback/feedback-widget';
 
 export const metadata: Metadata = {
   title: 'Evermore | Funeral Coordination, Planning & Support',
@@ -34,7 +33,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased min-h-screen">
         {children}
-        <FeedbackWidget />
       </body>
     </html>
   );

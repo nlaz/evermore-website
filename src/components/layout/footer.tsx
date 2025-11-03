@@ -3,10 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const footerLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#about', label: 'About' },
-  { href: '#resources', label: 'Resources' },
+  { href: '#what-we-do', label: 'What We Do' },
+  { href: '#about', label: 'About Us' },
+  { href: '#offerings', label: 'Offerings' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -34,7 +33,7 @@ export default function Footer() {
             </div>
             <p className="text-sm opacity-70">Funeral Coordination, Planning & Support</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
             {footerLinks.map((link) => (
               <Link
                 key={link.href}

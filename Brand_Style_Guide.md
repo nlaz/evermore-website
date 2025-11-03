@@ -11,26 +11,39 @@ Evermore is a funeral planning and support service rooted in reverence, elegance
 
 ## ✒️ Typography
 
-### Primary Header Font  
-**Mortuary** (or similar Gothic serif)  
-Bold, serif type with high contrast strokes. It evokes tradition, structure, and formality while remaining warm and personal.
+### Primary Header Font
+**NN Konrad** (Licensed brand font)
+Sophisticated serif type with elegant proportions. Available in Regular, Medium, and Bold weights. Evokes tradition, structure, and formality while remaining warm and timeless.
 
-### Body Font  
-**Modern Sans-Serif** (e.g., Inter, Jost)  
-Used for subheadings and utility text (e.g., "Funeral Coordination, Planning & Support"). Clean, accessible, and minimal to complement the primary serif font.
+### Body Font
+**Untitled Sans** (Licensed brand font)
+Clean, modern sans-serif used for body text, subheadings, and utility text. Available in Light, Regular, and Bold weights, plus italic variants. Highly legible and perfectly complements the header font.
 
 ---
 
 ## 🎨 Color Palette
 
-| Color Name        | Hex Code   | Description                        |
-|------------------|------------|------------------------------------|
-| Ink Black         | `#1A1A1A` | Deep black for text and accents     |
-| Forest Charcoal   | `#2E2F2C` | Earthy dark green-gray              |
-| Moss Olive        | `#3C3F2D` | Natural olive-green tone            |
-| Soft Ivory        | `#F9F7F2` | Background; gentle and neutral      |
+### Core Brand Colors (Primary)
 
-These muted, grounded tones mirror nature and memorial tradition. The palette provides contrast and clarity without overwhelming the eye — ideal for grief-related services that require sensitivity and calm.
+| Color Name        | Hex Code   | RGB            | Usage                           |
+|------------------|------------|----------------|----------------------------------|
+| Golden Ochre      | `#AF8E5C` | 175, 142, 92   | Primary accent color, CTAs, highlights |
+| Midnight Moss     | `#273229` | 39, 50, 41     | Dark foundation, backgrounds    |
+| Charred Plum      | `#362630` | 54, 38, 48     | Rich dark accent, depth         |
+
+### Supporting Palette
+
+| Color Name        | Hex Code   | RGB            | Usage                           |
+|------------------|------------|----------------|----------------------------------|
+| Soft Parchment    | `#D8C8B8` | 216, 200, 184  | Light backgrounds, text on dark |
+| Stone Sage        | `#5A685C` | 90, 104, 92    | Muted green accents             |
+| Deep Slate        | `#333E4E` | 51, 62, 78     | Cool dark tones                 |
+| Muted Rose        | `#A4816D` | 164, 129, 109  | Warm neutral accents            |
+| Lilac Mist        | `#918A94` | 145, 138, 148  | Subtle purple-gray              |
+| Pale Stone        | `#C8C2B8` | 200, 194, 184  | Neutral backgrounds             |
+
+**Color Philosophy:**
+These sophisticated, earthy tones create a warm yet dignified atmosphere. The palette balances richness (Golden Ochre, Charred Plum) with grounded naturals (Midnight Moss, Stone Sage), providing emotional warmth without overwhelming sensitivity. Perfect for services that require both professionalism and compassion.
 
 ---
 
@@ -44,7 +57,19 @@ These muted, grounded tones mirror nature and memorial tradition. The palette pr
 
 ## 🌸 Logo
 
-A delicate floral emblem enclosed in an oval represents memory, life cycles, and care. It balances strength and softness — the flower is stylized, not overly intricate, making it feel modern yet meaningful.
+The Evermore logo features a delicate floral emblem that represents memory, life cycles, and care. It balances strength and softness — the design is stylized, not overly intricate, making it feel modern yet meaningful.
+
+**Logo Variants:**
+- **Primary Logo:** Full logo with emblem and wordmark
+- **Horizontal Logo:** Compact horizontal arrangement (used in navbar)
+- **Wordmark:** Text-only version for tight spaces
+- **Emblem:** Standalone emblem for icons and favicons
+- **Simple Emblem:** Simplified version for small sizes
+
+**Color Versions:**
+- Golden Ochre (primary on light backgrounds)
+- Midnight Moss (on parchment/light backgrounds)
+- Charred Plum (alternative dark version)
 
 ---
 

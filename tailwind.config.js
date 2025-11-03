@@ -8,17 +8,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary brand colors from style guide
-        'ink-black': '#1A1A1A',
-        'forest-charcoal': '#2E2F2C',
-        'moss-olive': '#3C3F2D',
-        'soft-ivory': '#F9F7F2',
-        // Removed custom accent colors to align with style guide
-        'warm-gray': '#E5E2DC'
+        // Core Brand Colors (Official Evermore Brand Package)
+        'golden-ochre': '#AF8E5C',      // Primary accent - RGB(175, 142, 92)
+        'midnight-moss': '#273229',      // Dark foundation - RGB(39, 50, 41)
+        'charred-plum': '#362630',       // Rich dark accent - RGB(54, 38, 48)
+
+        // Supporting Palette
+        'soft-parchment': '#D8C8B8',     // Light background - RGB(216, 200, 184)
+        'stone-sage': '#5A685C',         // Muted green - RGB(90, 104, 92)
+        'deep-slate': '#333E4E',         // Cool dark - RGB(51, 62, 78)
+        'muted-rose': '#A4816D',         // Warm neutral - RGB(164, 129, 109)
+        'lilac-mist': '#918A94',         // Subtle purple-gray - RGB(145, 138, 148)
+        'pale-stone': '#C8C2B8',         // Neutral background - RGB(200, 194, 184)
+
+        // Semantic aliases for easier use
+        'primary': '#AF8E5C',            // golden-ochre
+        'secondary': '#273229',          // midnight-moss
+        'accent': '#362630',             // charred-plum
       },
       fontFamily: {
-        'mortuary': ['var(--font-mortuary)', 'serif'],
-        'sans': ['var(--font-inter)', 'sans-serif'],
+        'heading': ['NN Konrad', 'serif'],
+        'sans': ['Untitled Sans', 'system-ui', 'sans-serif'],
+        'body': ['Untitled Sans', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'texture-pattern': "url('/images/subtle-texture.png')",

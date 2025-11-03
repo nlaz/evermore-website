@@ -1,21 +1,6 @@
 import './globals.css';
-import { Jost, Cinzel } from 'next/font/google';
 import type { Metadata } from 'next';
 import FeedbackWidget from '@/components/feedback/feedback-widget';
-
-// Load Jost font for body text
-const inter = Jost({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-});
-
-// Load Cinzel as elegant serif font for headings
-const mortuary = Cinzel({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-mortuary',
-});
 
 export const metadata: Metadata = {
   title: 'Evermore | Funeral Coordination, Planning & Support',
@@ -46,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mortuary.variable}`}>
+    <html lang="en">
       <body className="antialiased min-h-screen">
         {children}
         <FeedbackWidget />

@@ -109,7 +109,7 @@ const TestingPage = () => {
     if (confirm('Are you sure you want to reset all test results?')) {
       const resetResults = testResults.map(result => ({
         ...result,
-        status: 'pending',
+        status: 'pending' as const,
         notes: '',
         timestamp: undefined
       }));

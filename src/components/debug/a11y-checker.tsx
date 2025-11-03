@@ -25,21 +25,22 @@ const A11yChecker = () => {
     
     try {
       // Check if axe is available
+      // @ts-ignore - axe is loaded dynamically
       if (typeof window !== 'undefined' && !window.axe) {
         // Load axe-core from CDN dynamically
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.7.0/axe.min.js';
         script.async = true;
-        
+
         await new Promise((resolve, reject) => {
           script.onload = resolve;
           script.onerror = () => reject(new Error('Failed to load axe-core'));
           document.body.appendChild(script);
         });
       }
-      
+
       // Run axe
-      // @ts-ignore
+      // @ts-ignore - axe is loaded dynamically
       const results = await window.axe.run();
       setIssues(results.violations);
     } catch (err) {

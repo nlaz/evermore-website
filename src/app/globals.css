@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* NN Konrad - Brand Heading Font */
+@font-face {
+  font-family: 'NN Konrad';
+  src: url('/fonts/NNKonrad-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NN Konrad';
+  src: url('/fonts/NNKonrad-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NN Konrad';
+  src: url('/fonts/NNKonrad-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Untitled Sans - Brand Body Font */
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('/fonts/UntitledSans-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 26, 26, 26;
   --background-rgb: 255, 255, 255;
@@ -22,29 +96,29 @@ body {
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-mortuary;
+    @apply font-heading;
   }
 
   p, span, div, a, button {
-    @apply font-sans;
+    @apply font-body;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-moss-olive text-soft-ivory px-6 py-3 transition-all;
+    @apply bg-golden-ochre text-white px-6 py-3 transition-all;
   }
-  
+
   .btn-primary:hover {
-    @apply bg-forest-charcoal;
+    @apply bg-golden-ochre/90;
   }
-  
+
   .btn-outline {
-    @apply border border-soft-ivory text-soft-ivory px-6 py-3 transition-all;
+    @apply border-2 border-golden-ochre text-golden-ochre px-6 py-3 transition-all;
   }
-  
+
   .btn-outline:hover {
-    @apply bg-soft-ivory/10;
+    @apply bg-golden-ochre text-white;
   }
   
   .container-custom {

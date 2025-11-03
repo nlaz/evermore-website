@@ -20,11 +20,11 @@ export default function Button({
   ...props
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const baseStyles = 'rounded-lg transition-all font-medium';
-  
+
   const variantStyles = {
-    primary: 'bg-moss-olive text-soft-ivory hover:bg-forest-charcoal',
-    secondary: 'bg-forest-charcoal text-soft-ivory hover:bg-ink-black',
-    outline: 'border border-moss-olive text-ink-black hover:bg-moss-olive/5',
+    primary: 'bg-golden-ochre text-white hover:bg-golden-ochre/90',
+    secondary: 'bg-midnight-moss text-soft-parchment hover:bg-charred-plum',
+    outline: 'border-2 border-golden-ochre text-golden-ochre hover:bg-golden-ochre hover:text-white',
   };
   
   const sizeStyles = {

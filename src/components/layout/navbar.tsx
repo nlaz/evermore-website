@@ -53,11 +53,11 @@ export default function Navbar() {
   const easedBlurProgress = scrollProgress * scrollProgress * scrollProgress;
   const blurAmount = easedBlurProgress * 4;
   
-  // Interpolate padding: from pt-20/pt-24 pb-6 to py-4
-  // Mobile: pt-20 (80px) to py-4 (16px top)
+  // Interpolate padding: from pt-12/pt-24 pb-6 to py-4
+  // Mobile: pt-12 (48px) to py-4 (16px top)
   // Desktop: pt-24 (96px) to py-4 (16px top)
   // Bottom padding stays at 6 (24px) when at top, goes to 4 (16px) when scrolled
-  const mobileTopPadding = 80 - (scrollProgress * (80 - 16));
+  const mobileTopPadding = 48 - (scrollProgress * (48 - 16));
   const desktopTopPadding = 96 - (scrollProgress * (96 - 16));
   const bottomPadding = 24 - (scrollProgress * (24 - 16));
   
@@ -75,13 +75,13 @@ export default function Navbar() {
       }}
     >
       <div 
-        className="container-custom flex items-center justify-between px-4 sm:px-0"
+        className="container-custom flex items-center justify-between px-8 sm:px-0"
         style={{
           paddingTop: isDesktop ? `${desktopTopPadding}px` : `${mobileTopPadding}px`,
           paddingBottom: `${bottomPadding}px`,
         }}
       >
-        <Link href="/" aria-label="Evermore Home" className="relative group">
+        <Link href="/" aria-label="Evermore Home" className="relative inline-block group">
           <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
           <Image
             src={getAssetPath('/logos/Evermore_Logo_Horizontal_GoldenOchre.png')}

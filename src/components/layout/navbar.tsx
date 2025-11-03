@@ -34,9 +34,9 @@ export default function Navbar() {
     <nav className={`w-full fixed top-0 z-50 transition-all duration-500 ${
       scrolled
         ? 'bg-charred-plum/95 backdrop-blur-sm border-b border-pale-stone/10'
-        : 'bg-charred-plum'
+        : 'bg-transparent'
     }`}>
-      <div className="container-custom flex items-center justify-between py-6">
+      <div className="container-custom flex items-center justify-between pt-12 md:pt-16 pb-6">
         <Link href="/" aria-label="Evermore Home" className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
           <Image

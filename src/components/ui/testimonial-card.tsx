@@ -19,14 +19,14 @@ export default function TestimonialCard({
         {quote}
       </blockquote>
       <div className="flex items-center justify-center mt-8">
-        <div className="h-px w-8 bg-terracotta/40 mr-4"></div>
+        <div className="h-px w-8 bg-charred-plum/40 mr-4"></div>
         <div className="text-center">
-          <p className="font-medium tracking-wide text-forest-charcoal">{author}</p>
+          <p className="font-medium tracking-wide text-charred-plum">{author}</p>
           {relation && (
-            <p className="text-sm uppercase tracking-wider text-forest-charcoal/60 mt-1">{relation}</p>
+            <p className="text-sm uppercase tracking-wider text-deep-slate/60 mt-1">{relation}</p>
           )}
         </div>
-        <div className="h-px w-8 bg-terracotta/40 ml-4"></div>
+        <div className="h-px w-8 bg-charred-plum/40 ml-4"></div>
       </div>
     </div>
   );

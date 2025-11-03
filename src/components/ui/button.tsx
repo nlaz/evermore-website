@@ -22,9 +22,9 @@ export default function Button({
   const baseStyles = 'rounded-lg transition-all font-medium';
 
   const variantStyles = {
-    primary: 'bg-golden-ochre text-white hover:bg-golden-ochre/90',
-    secondary: 'bg-midnight-moss text-soft-parchment hover:bg-charred-plum',
-    outline: 'border-2 border-golden-ochre text-golden-ochre hover:bg-golden-ochre hover:text-white',
+    primary: 'bg-charred-plum text-white hover:bg-charred-plum/90',
+    secondary: 'bg-deep-slate text-soft-parchment hover:bg-deep-slate/90',
+    outline: 'border-2 border-charred-plum text-charred-plum hover:bg-charred-plum hover:text-white',
   };
   
   const sizeStyles = {

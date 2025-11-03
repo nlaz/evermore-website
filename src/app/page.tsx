@@ -29,10 +29,12 @@ export default function Home() {
 
       {/* Hero section - Aligned with Brand Style Guide */}
       <section className="w-full h-screen flex items-center bg-charred-plum relative overflow-hidden p-8 md:p-12">
-        <div className="absolute inset-8 md:inset-12 z-0 bg-charred-plum rounded-2xl" style={{ border: '0.5px solid rgba(200, 194, 184, 0.5)' }}>
-          {/* Subtle texture overlay for tactile feel */}
-          <div className="absolute inset-0 bg-[url('/images/subtle-texture.png')] opacity-5 z-20 rounded-2xl"></div>
-          <div className="h-full w-full bg-gradient-to-br from-charred-plum via-charred-plum to-charred-plum/80 rounded-2xl"></div>
+        <div className="absolute inset-6 md:inset-8 z-0 rounded-2xl border border-pale-stone/50">
+          <div className="absolute inset-px rounded-2xl bg-charred-plum overflow-hidden">
+            {/* Subtle texture overlay for tactile feel */}
+            <div className="absolute inset-0 bg-[url('/images/subtle-texture.png')] opacity-5 z-10 pointer-events-none"></div>
+            <div className="h-full w-full bg-gradient-to-br from-charred-plum via-charred-plum to-charred-plum/80"></div>
+          </div>
         </div>
 
         <div className="container-custom relative z-10">
@@ -74,19 +76,19 @@ export default function Home() {
         <div className="absolute inset-0 bg-texture-pattern opacity-5 pointer-events-none"></div>
         
         {/* Signature design element */}
-        <div className="absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-golden-ochre/5 blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-charred-plum/5 blur-3xl"></div>
         <div className="absolute top-40 -left-20 w-80 h-80 rounded-full bg-deep-slate/5 blur-3xl"></div>
         
         <div className="container-custom relative">
           <div className="flex flex-col md:flex-row items-center gap-20 mb-32">
             <div className="w-full md:w-1/2 fade-in-up">
-              <span className="text-sm uppercase tracking-widest text-golden-ochre font-light mb-8 block">Our Approach</span>
-              <h2 className="text-4xl md:text-6xl font-heading mb-8 tracking-wide leading-tight">Why families <br/>choose Evermore</h2>
-              <p className="text-xl text-midnight-moss/80 mb-10 leading-relaxed font-light">
+              <span className="text-sm uppercase tracking-widest text-deep-slate font-light mb-8 block">Our Approach</span>
+              <h2 className="text-4xl md:text-6xl font-heading mb-8 tracking-wide leading-tight text-charred-plum">Why families <br/>choose Evermore</h2>
+              <p className="text-xl text-deep-slate/80 mb-10 leading-relaxed font-light">
                 We're your partner, not your salesperson. From our first conversation through life's most tender moments, 
                 we stand beside you with compassion, clarity, and respect.
               </p>
-              <div className="h-px w-40 bg-gradient-to-r from-golden-ochre to-golden-ochre/0"></div>
+              <div className="h-px w-40 bg-gradient-to-r from-deep-slate to-deep-slate/0"></div>
             </div>
             
             <div className="w-full md:w-1/2 relative group">
@@ -106,40 +108,40 @@ export default function Home() {
           {/* Core values section with refined typography and layout */}
           <div className="grid md:grid-cols-2 gap-10 mb-32">
             <div className="relative slide-in-left" style={{ animationDelay: '0.1s' }}>
-              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-golden-ochre/30 to-transparent"></div>
+              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-charred-plum/30 to-transparent"></div>
               <div className="pl-10 py-2">
-                <h3 className="text-2xl font-heading mb-4 text-midnight-moss">Empathy‑First</h3>
-                <p className="text-lg text-midnight-moss/70 font-light leading-relaxed">
+                <h3 className="text-2xl font-heading mb-4 text-charred-plum">Empathy‑First</h3>
+                <p className="text-lg text-deep-slate/70 font-light leading-relaxed">
                   We listen deeply, offering calm guidance at every step of the journey. Your emotions and needs guide our approach.
                 </p>
               </div>
             </div>
             
             <div className="relative slide-in-left" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-golden-ochre/30 to-transparent"></div>
+              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-charred-plum/30 to-transparent"></div>
               <div className="pl-10 py-2">
-                <h3 className="text-2xl font-heading mb-4 text-midnight-moss">Vendor‑Neutral</h3>
-                <p className="text-lg text-midnight-moss/70 font-light leading-relaxed">
+                <h3 className="text-2xl font-heading mb-4 text-charred-plum">Vendor‑Neutral</h3>
+                <p className="text-lg text-deep-slate/70 font-light leading-relaxed">
                   Your choices matter deeply. We recommend only what aligns with your values, priorities, and budget.
                 </p>
               </div>
             </div>
             
             <div className="relative slide-in-left" style={{ animationDelay: '0.3s' }}>
-              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-golden-ochre/30 to-transparent"></div>
+              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-charred-plum/30 to-transparent"></div>
               <div className="pl-10 py-2">
-                <h3 className="text-2xl font-heading mb-4 text-midnight-moss">Culturally Fluent</h3>
-                <p className="text-lg text-midnight-moss/70 font-light leading-relaxed">
+                <h3 className="text-2xl font-heading mb-4 text-charred-plum">Culturally Fluent</h3>
+                <p className="text-lg text-deep-slate/70 font-light leading-relaxed">
                   Whether it's a traditional janazah, a Jewish tahara, or a hybrid celebration-of-life, we honor your traditions with respect and understanding.
                 </p>
               </div>
             </div>
             
             <div className="relative slide-in-left" style={{ animationDelay: '0.4s' }}>
-              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-golden-ochre/30 to-transparent"></div>
+              <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-transparent via-charred-plum/30 to-transparent"></div>
               <div className="pl-10 py-2">
-                <h3 className="text-2xl font-heading mb-4 text-midnight-moss">Post‑Funeral Care</h3>
-                <p className="text-lg text-midnight-moss/70 font-light leading-relaxed">
+                <h3 className="text-2xl font-heading mb-4 text-charred-plum">Post‑Funeral Care</h3>
+                <p className="text-lg text-deep-slate/70 font-light leading-relaxed">
                   When the service ends, our support continues—from paperwork assistance to meal trains and bereavement resources.
                 </p>
               </div>
@@ -153,8 +155,8 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-pale-stone/40 to-transparent"></div>
             
             {/* Quote marks */}
-            <div className="text-6xl font-heading text-golden-ochre/30 absolute -top-8 left-8">"</div>
-            <div className="text-6xl font-heading text-golden-ochre/30 absolute -bottom-14 right-8 transform rotate-180">"</div>
+            <div className="text-6xl font-heading text-charred-plum/30 absolute -top-8 left-8">"</div>
+            <div className="text-6xl font-heading text-charred-plum/30 absolute -bottom-14 right-8 transform rotate-180">"</div>
             
             <TestimonialCard
               quote="Evermore allowed us to focus on one another during such a difficult time. They handled everything with grace, dignity, and a profound sense of compassion that made us feel truly supported."
@@ -167,7 +169,7 @@ export default function Home() {
       </section>
       
       {/* How It Works section - Squarespace-style */}
-      <section id="how-it-works" className="w-full bg-golden-ochre text-soft-parchment py-32">
+      <section id="how-it-works" className="w-full bg-deep-slate text-soft-parchment py-32">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-heading mb-6">How It Works</h2>
@@ -215,34 +217,34 @@ export default function Home() {
       <section id="services" className="w-full bg-soft-parchment py-32">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading mb-6 text-center">Services & Packages</h2>
-            <p className="text-xl text-midnight-moss/80 text-center leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-heading mb-6 text-center text-charred-plum">Services & Packages</h2>
+            <p className="text-xl text-deep-slate/80 text-center leading-relaxed">
               Choose the support that fits your family. All packages are transparent, vendor‑neutral, and customizable.
             </p>
-            <div className="h-px w-40 bg-golden-ochre mx-auto mt-10"></div>
+            <div className="h-px w-40 bg-charred-plum mx-auto mt-10"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-0 max-w-5xl mx-auto mb-24">
-            <div className="p-12 bg-white border border-golden-ochre/20 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-2xl font-heading mb-2">Consulting Only</h3>
-              <div className="mb-6 border-b border-golden-ochre/20 pb-4">
-                <span className="text-3xl font-bold text-golden-ochre">$1,500</span>
+            <div className="p-12 bg-white border border-charred-plum/20 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-heading mb-2 text-charred-plum">Consulting Only</h3>
+              <div className="mb-6 border-b border-charred-plum/20 pb-4">
+                <span className="text-3xl font-bold text-charred-plum">$1,500</span>
               </div>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Expert guidance and consultation</span>
                 </li>
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Planning templates and documents</span>
                 </li>
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Curated vendor recommendations</span>
@@ -251,9 +253,9 @@ export default function Home() {
               <Button href="/consultation" variant="outline" className="w-full justify-center">Learn More</Button>
             </div>
             
-            <div className="p-12 bg-golden-ochre text-soft-parchment border-y-2 border-soft-parchment relative hover:shadow-lg transition-all duration-300">
+            <div className="p-12 bg-charred-plum text-soft-parchment border-y-2 border-soft-parchment relative hover:shadow-lg transition-all duration-300">
               <div className="absolute -top-4 left-0 right-0 flex justify-center">
-                <span className="px-4 py-1 bg-midnight-moss text-soft-parchment text-sm uppercase tracking-wide font-medium">Most Popular</span>
+                <span className="px-4 py-1 bg-deep-slate text-soft-parchment text-sm uppercase tracking-wide font-medium">Most Popular</span>
               </div>
               <h3 className="text-2xl font-heading mb-2">Day‑of Coordination</h3>
               <div className="mb-6 border-b border-soft-parchment/20 pb-4">
@@ -285,35 +287,35 @@ export default function Home() {
                   <span>Family and guest management</span>
                 </li>
               </ul>
-              <Button href="/consultation" variant="primary" className="bg-soft-parchment text-golden-ochre hover:bg-soft-parchment/90 w-full justify-center">Select This Package</Button>
+              <Button href="/consultation" variant="primary" className="bg-soft-parchment text-charred-plum hover:bg-soft-parchment/90 w-full justify-center">Select This Package</Button>
             </div>
             
-            <div className="p-12 bg-white border border-golden-ochre/20 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-2xl font-heading mb-2">Full‑Service Support</h3>
-              <div className="mb-6 border-b border-golden-ochre/20 pb-4">
-                <span className="text-3xl font-bold text-golden-ochre">$5,500</span>
+            <div className="p-12 bg-white border border-charred-plum/20 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-heading mb-2 text-charred-plum">Full‑Service Support</h3>
+              <div className="mb-6 border-b border-charred-plum/20 pb-4">
+                <span className="text-3xl font-bold text-charred-plum">$5,500</span>
               </div>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Comprehensive planning services</span>
                 </li>
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Complete event execution</span>
                 </li>
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Extended post‑funeral care</span>
                 </li>
-                <li className="flex items-start text-midnight-moss/80">
-                  <svg className="h-5 w-5 text-golden-ochre mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-deep-slate/80">
+                  <svg className="h-5 w-5 text-charred-plum mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Complete administrative support</span>
@@ -324,8 +326,8 @@ export default function Home() {
           </div>
           
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg text-midnight-moss/80 mb-10">
-              <span className="font-medium text-midnight-moss">Custom Add‑Ons Available:</span> obituary writing • digital tributes • death certificate processing • meal‑train coordination
+            <p className="text-lg text-deep-slate/80 mb-10">
+              <span className="font-medium text-charred-plum">Custom Add‑Ons Available:</span> obituary writing • digital tributes • death certificate processing • meal‑train coordination
             </p>
             <Button href="/consultation" variant="primary" size="lg" className="px-10">Contact Us for a Custom Quote</Button>
           </div>
@@ -335,7 +337,7 @@ export default function Home() {
       {/* About section */}
       <section id="about" className="w-full bg-soft-parchment py-20">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center">About Us</h2>
+          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center text-charred-plum">About Us</h2>
           
           <div className="max-w-4xl mx-auto">
             <p className="text-xl mb-10 text-center">
@@ -372,20 +374,20 @@ export default function Home() {
       </section>
       
       {/* Resources section with FAQs */}
-      <section id="resources" className="w-full bg-midnight-moss text-soft-parchment py-20">
+      <section id="resources" className="w-full bg-charred-plum text-soft-parchment py-20">
         <div className="container-custom">
           <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center">Resources & FAQs</h2>
           
           <div className="max-w-4xl mx-auto mb-16">
             <h3 className="text-2xl font-heading mb-6 text-center">Featured Articles</h3>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-midnight-moss/50 p-6 rounded-lg">
+              <div className="bg-deep-slate/30 p-6 rounded-lg">
                 <p className="italic">What to Expect at a Modern Funeral</p>
               </div>
-              <div className="bg-midnight-moss/50 p-6 rounded-lg">
+              <div className="bg-deep-slate/30 p-6 rounded-lg">
                 <p className="italic">How to Incorporate Digital Tributes</p>
               </div>
-              <div className="bg-midnight-moss/50 p-6 rounded-lg">
+              <div className="bg-deep-slate/30 p-6 rounded-lg">
                 <p className="italic">A Guide to Pre‑Planning Your Goodbye</p>
               </div>
             </div>
@@ -405,26 +407,26 @@ export default function Home() {
       {/* Contact section */}
       <section id="contact" className="w-full bg-soft-parchment py-20">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center">Contact & Location</h2>
-          <p className="text-xl max-w-4xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center text-charred-plum">Contact & Location</h2>
+          <p className="text-xl max-w-4xl mx-auto text-center mb-12 text-deep-slate/80">
             Have questions or ready to begin? Reach out today.
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
-              <h3 className="text-2xl font-heading mb-6">Schedule a Consultation</h3>
-              <ul className="space-y-4">
+              <h3 className="text-2xl font-heading mb-6 text-charred-plum">Schedule a Consultation</h3>
+              <ul className="space-y-4 text-deep-slate/80">
                 <li className="flex items-start">
-                  <span className="font-medium mr-2">Phone:</span> (212) 555‑1234
+                  <span className="font-medium mr-2 text-charred-plum">Phone:</span> (212) 555‑1234
                 </li>
                 <li className="flex items-start">
-                  <span className="font-medium mr-2">Email:</span> hello@evermorefuneral.com
+                  <span className="font-medium mr-2 text-charred-plum">Email:</span> hello@evermorefuneral.com
                 </li>
                 <li className="flex items-start">
-                  <span className="font-medium mr-2">Hours:</span> Mon–Fri, 9 AM–6 PM ET
+                  <span className="font-medium mr-2 text-charred-plum">Hours:</span> Mon–Fri, 9 AM–6 PM ET
                 </li>
                 <li className="flex items-start mt-6">
-                  <span className="font-medium mr-2">Office:</span> Serving the NYC metro area and beyond
+                  <span className="font-medium mr-2 text-charred-plum">Office:</span> Serving the NYC metro area and beyond
                 </li>
               </ul>
               
@@ -436,35 +438,35 @@ export default function Home() {
             <div>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block mb-1">Name</label>
+                  <label htmlFor="name" className="block mb-1 text-deep-slate">Name</label>
                   <input 
                     type="text" 
                     id="name" 
-                    className="w-full p-3 border border-golden-ochre/30 rounded-lg bg-soft-parchment focus:border-golden-ochre focus:outline-none"
+                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block mb-1">Email</label>
+                  <label htmlFor="email" className="block mb-1 text-deep-slate">Email</label>
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full p-3 border border-golden-ochre/30 rounded-lg bg-soft-parchment focus:border-golden-ochre focus:outline-none"
+                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block mb-1">Phone</label>
+                  <label htmlFor="phone" className="block mb-1 text-deep-slate">Phone</label>
                   <input 
                     type="tel" 
                     id="phone" 
-                    className="w-full p-3 border border-golden-ochre/30 rounded-lg bg-soft-parchment focus:border-golden-ochre focus:outline-none"
+                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block mb-1">How can we help?</label>
+                  <label htmlFor="message" className="block mb-1 text-deep-slate">How can we help?</label>
                   <textarea 
                     id="message" 
                     rows={4} 
-                    className="w-full p-3 border border-golden-ochre/30 rounded-lg bg-soft-parchment focus:border-golden-ochre focus:outline-none"
+                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
                   ></textarea>
                 </div>
                 <div>

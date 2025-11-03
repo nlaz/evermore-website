@@ -13,10 +13,10 @@ function FAQItem({ question, answer }: FAQItemProps) {
   const answerId = `${id}-answer`;
 
   return (
-    <div className="border-b border-moss-olive/20 py-4">
+    <div className="border-b border-pale-stone/20 py-4">
       <h3>
         <button
-          className="flex w-full justify-between items-center text-left focus:outline-none focus:ring-2 focus:ring-moss-olive rounded-sm px-1"
+          className="flex w-full justify-between items-center text-left focus:outline-none focus:ring-2 focus:ring-pale-stone rounded-sm px-1"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-controls={answerId}
@@ -29,7 +29,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
       
       <div 
         id={answerId}
-        className={`mt-2 text-forest-charcoal/80 ${isOpen ? '' : 'hidden'}`}
+        className={`mt-2 text-soft-parchment/80 ${isOpen ? '' : 'hidden'}`}
         aria-labelledby={id}
         role="region"
       >

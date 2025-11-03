@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  basePath: '/evermore-website',
   images: {
-    domains: ['via.placeholder.com'],
+    unoptimized: true,
   },
 }
 

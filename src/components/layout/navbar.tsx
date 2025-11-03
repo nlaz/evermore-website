@@ -81,8 +81,7 @@ export default function Navbar() {
           paddingBottom: `${bottomPadding}px`,
         }}
       >
-        <Link href="/" aria-label="Evermore Home" className="relative inline-block group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
+        <Link href="/" aria-label="Evermore Home" className="relative inline-block group flex items-center">
           <Image
             src={getAssetPath('/logos/Evermore_Logo_Horizontal_GoldenOchre.png')}
             alt="Evermore"

@@ -94,6 +94,14 @@ body {
   letter-spacing: 0.01em;
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
@@ -122,7 +130,7 @@ body {
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-8 sm:px-10 lg:px-12;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12;
   }
   
   /* Squarespace-style animations */
@@ -154,6 +162,22 @@ body {
   
   .bg-blur {
     backdrop-filter: blur(8px);
+  }
+  
+  /* Mobile-friendly text truncation */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Touch-friendly tap targets */
+  @media (max-width: 640px) {
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
 

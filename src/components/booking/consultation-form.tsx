@@ -146,14 +146,14 @@ export default function ConsultationForm() {
   
   if (isSubmitted) {
     return (
-      <div className="bg-deep-slate/30 p-8 rounded-lg text-center border border-deep-slate/30">
-        <h3 className="text-2xl font-heading mb-4 text-pale-stone">Thank You</h3>
-        <p className="mb-6 text-pale-stone/90">
+      <div className="bg-deep-slate/30 p-6 sm:p-8 rounded-lg text-center border border-deep-slate/30">
+        <h3 className="text-xl sm:text-2xl font-heading mb-3 sm:mb-4 text-pale-stone">Thank You</h3>
+        <p className="mb-5 sm:mb-6 text-sm sm:text-base text-pale-stone/90">
           We've received your consultation request and will be in touch within 24 hours to confirm your appointment.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="px-6 py-3 text-base font-normal tracking-wide bg-golden-ochre text-midnight-moss rounded-full border border-golden-ochre hover:bg-golden-ochre/90 transition-all duration-300"
+          className="px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-normal tracking-wide bg-golden-ochre text-midnight-moss rounded-full border border-golden-ochre hover:bg-golden-ochre/90 transition-all duration-300"
           style={{ borderRadius: '12px' }}
         >
           Schedule Another Consultation
@@ -163,10 +163,10 @@ export default function ConsultationForm() {
   }
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <div>
-          <label htmlFor="name" className="block mb-1 text-pale-stone">Name</label>
+          <label htmlFor="name" className="block mb-1 text-sm sm:text-base text-pale-stone">Name</label>
           <input 
             type="text" 
             id="name"
@@ -177,13 +177,13 @@ export default function ConsultationForm() {
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? "name-error" : undefined}
             placeholder="Your name"
-            className={`w-full p-3 border ${errors.name ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
+            className={`w-full p-2.5 sm:p-3 text-sm sm:text-base border ${errors.name ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
           />
-          {errors.name && <p id="name-error" className="text-red-400 text-sm mt-1" aria-live="polite">{errors.name}</p>}
+          {errors.name && <p id="name-error" className="text-red-400 text-xs sm:text-sm mt-1" aria-live="polite">{errors.name}</p>}
         </div>
         
         <div>
-          <label htmlFor="email" className="block mb-1 text-pale-stone">Email</label>
+          <label htmlFor="email" className="block mb-1 text-sm sm:text-base text-pale-stone">Email</label>
           <input 
             type="email" 
             id="email"
@@ -194,14 +194,14 @@ export default function ConsultationForm() {
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "email-error" : undefined}
             placeholder="your.email@example.com"
-            className={`w-full p-3 border ${errors.email ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
+            className={`w-full p-2.5 sm:p-3 text-sm sm:text-base border ${errors.email ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
           />
-          {errors.email && <p id="email-error" className="text-red-400 text-sm mt-1" aria-live="polite">{errors.email}</p>}
+          {errors.email && <p id="email-error" className="text-red-400 text-xs sm:text-sm mt-1" aria-live="polite">{errors.email}</p>}
         </div>
       </div>
       
       <div>
-        <label htmlFor="phone" className="block mb-1 text-pale-stone">Phone</label>
+        <label htmlFor="phone" className="block mb-1 text-sm sm:text-base text-pale-stone">Phone</label>
         <input 
           type="tel" 
           id="phone"
@@ -211,22 +211,22 @@ export default function ConsultationForm() {
           aria-required="true"
           aria-invalid={!!errors.phone}
           aria-describedby={errors.phone ? "phone-error" : "phone-format"}
-          className={`w-full p-3 border ${errors.phone ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
+          className={`w-full p-2.5 sm:p-3 text-sm sm:text-base border ${errors.phone ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60`}
           placeholder="(123) 456-7890"
         />
         <p id="phone-format" className="text-pale-stone/60 text-xs mt-1">Format: (123) 456-7890</p>
-        {errors.phone && <p id="phone-error" className="text-red-400 text-sm mt-1" aria-live="polite">{errors.phone}</p>}
+        {errors.phone && <p id="phone-error" className="text-red-400 text-xs sm:text-sm mt-1" aria-live="polite">{errors.phone}</p>}
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <div>
-          <label htmlFor="preferredDate" className="block mb-1 text-pale-stone">Preferred Date</label>
+          <label htmlFor="preferredDate" className="block mb-1 text-sm sm:text-base text-pale-stone">Preferred Date</label>
           <select
             id="preferredDate"
             name="preferredDate"
             value={formData.preferredDate}
             onChange={handleChange}
-            className={`w-full p-3 border ${errors.preferredDate ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone`}
+            className={`w-full p-2.5 sm:p-3 text-sm sm:text-base border ${errors.preferredDate ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone`}
           >
             <option value="" className="text-charred-plum bg-white">Select a date</option>
             {generateAvailableDates().map(date => (
@@ -235,29 +235,29 @@ export default function ConsultationForm() {
               </option>
             ))}
           </select>
-          {errors.preferredDate && <p className="text-red-400 text-sm mt-1">{errors.preferredDate}</p>}
+          {errors.preferredDate && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.preferredDate}</p>}
         </div>
         
         <div>
-          <label htmlFor="preferredTime" className="block mb-1 text-pale-stone">Preferred Time</label>
+          <label htmlFor="preferredTime" className="block mb-1 text-sm sm:text-base text-pale-stone">Preferred Time</label>
           <select
             id="preferredTime"
             name="preferredTime"
             value={formData.preferredTime}
             onChange={handleChange}
-            className={`w-full p-3 border ${errors.preferredTime ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone`}
+            className={`w-full p-2.5 sm:p-3 text-sm sm:text-base border ${errors.preferredTime ? 'border-red-500' : 'border-pale-stone/30'} rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone`}
           >
             <option value="" className="text-charred-plum bg-white">Select a time</option>
             {generateTimeSlots().map(time => (
               <option key={time} value={time} className="text-charred-plum bg-white">{time}</option>
             ))}
           </select>
-          {errors.preferredTime && <p className="text-red-400 text-sm mt-1">{errors.preferredTime}</p>}
+          {errors.preferredTime && <p className="text-red-400 text-xs sm:text-sm mt-1">{errors.preferredTime}</p>}
         </div>
       </div>
       
       <div>
-        <label htmlFor="message" className="block mb-1 text-pale-stone">Tell us about your needs <span className="text-pale-stone/60 font-normal">(optional)</span></label>
+        <label htmlFor="message" className="block mb-1 text-sm sm:text-base text-pale-stone">Tell us about your needs <span className="text-pale-stone/60 font-normal">(optional)</span></label>
         <textarea 
           id="message"
           name="message"
@@ -265,22 +265,22 @@ export default function ConsultationForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Tell us how we can assist you..."
-          className="w-full p-3 border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60"
+          className="w-full p-2.5 sm:p-3 text-sm sm:text-base border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60 resize-none"
         ></textarea>
       </div>
       
-      <div className="flex justify-end gap-3">
+      <div className="flex flex-col sm:flex-row justify-end gap-2 sm:gap-3">
         <button
           type="button"
           onClick={handleClear}
-          className="px-6 py-3 text-base font-normal tracking-wide text-pale-stone/80 hover:text-pale-stone transition-all duration-300 bg-transparent border-none outline-none"
+          className="px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-normal tracking-wide text-pale-stone/80 hover:text-pale-stone transition-all duration-300 bg-transparent border-none outline-none order-2 sm:order-1"
         >
           Clear Form
         </button>
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`px-5 py-2.5 text-base font-normal tracking-wide bg-golden-ochre text-midnight-moss rounded-full border border-golden-ochre hover:bg-golden-ochre/90 transition-all duration-300 ${
+          className={`px-5 py-2.5 text-sm sm:text-base font-normal tracking-wide bg-golden-ochre text-midnight-moss rounded-full border border-golden-ochre hover:bg-golden-ochre/90 transition-all duration-300 order-1 sm:order-2 ${
             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
           }`}
           style={{ borderRadius: '12px' }}

@@ -3,12 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAssetPath } from '@/utils/asset-path';
 
 const navLinks = [
-  { href: '#what-we-do', label: 'What We Do' },
-  { href: '#about', label: 'About Us' },
-  { href: '#offerings', label: 'Offerings' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#what-we-do', label: 'What We Do' },
+  { href: '/#about', label: 'About Us' },
+  { href: '/#offerings', label: 'Offerings' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -74,7 +75,7 @@ export default function Navbar() {
       }}
     >
       <div 
-        className="container-custom flex items-center justify-between"
+        className="container-custom flex items-center justify-between px-4 sm:px-0"
         style={{
           paddingTop: isDesktop ? `${desktopTopPadding}px` : `${mobileTopPadding}px`,
           paddingBottom: `${bottomPadding}px`,
@@ -83,13 +84,13 @@ export default function Navbar() {
         <Link href="/" aria-label="Evermore Home" className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
           <Image
-            src="/logos/Evermore_Logo_Horizontal_GoldenOchre.png"
+            src={getAssetPath('/logos/Evermore_Logo_Horizontal_GoldenOchre.png')}
             alt="Evermore"
             width={220}
             height={60}
             priority
-            className="h-auto relative"
-            style={{ 
+            className="h-auto relative w-40 sm:w-48 md:w-52"
+            style={{
               filter: 'brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(378%) hue-rotate(350deg) brightness(97%) contrast(86%)',
               transform: `scale(${logoScale})`,
               transformOrigin: 'left center',
@@ -151,7 +152,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center p-6">
             <div className="w-44 opacity-70">
               <Image
-                src="/logos/Evermore_Logo_Horizontal_GoldenOchre.png"
+                src={getAssetPath('/logos/Evermore_Logo_Horizontal_GoldenOchre.png')}
                 alt="Evermore"
                 width={220}
                 height={60}

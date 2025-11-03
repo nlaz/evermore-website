@@ -81,34 +81,34 @@ export default function ResourcesPage() {
     <main className="flex min-h-screen flex-col items-center">
       <Navbar />
       
-      <section className="w-full bg-soft-ivory py-20">
+      <section className="w-full bg-soft-ivory py-16 sm:py-20">
         <div className="container-custom">
-          <h1 className="text-3xl md:text-5xl font-mortuary mb-6 text-center">Resources & Articles</h1>
-          <p className="text-xl text-center mb-12 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-mortuary mb-4 sm:mb-6 text-center px-4 sm:px-0">Resources & Articles</h1>
+          <p className="text-lg sm:text-xl text-center mb-10 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
             Helpful guidance to support you through every step of funeral planning and the grief journey.
           </p>
           
-          <div className="mb-16">
-            <div className="bg-forest-charcoal/5 p-8 rounded-lg text-center">
-              <h2 className="text-2xl font-mortuary mb-4">Download Our Family Support Guide</h2>
-              <p className="mb-6 max-w-2xl mx-auto">
+          <div className="mb-12 sm:mb-16">
+            <div className="bg-forest-charcoal/5 p-6 sm:p-8 rounded-lg text-center">
+              <h2 className="text-xl sm:text-2xl font-mortuary mb-3 sm:mb-4">Download Our Family Support Guide</h2>
+              <p className="mb-5 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base px-4 sm:px-0">
                 Our comprehensive guide includes planning checklists, cultural considerations, grief support resources, and more.
               </p>
               <Button href="/resources/family-guide" variant="primary">Get the Free Guide</Button>
             </div>
           </div>
           
-          <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-mortuary mb-8 text-center">Featured Articles</h2>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-mortuary mb-6 sm:mb-8 text-center">Featured Articles</h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {featuredArticles.map((article, index) => (
-                <article key={index} className="bg-white rounded-lg shadow-sm border border-moss-olive/10 overflow-hidden">
-                  <div className="p-6">
-                    <div className="text-sm text-moss-olive mb-2">{article.category}</div>
-                    <h3 className="font-mortuary text-xl mb-3">{article.title}</h3>
-                    <p className="mb-4 text-forest-charcoal/80">{article.excerpt}</p>
-                    <Link href={article.slug} className="text-moss-olive hover:underline">
+                <article key={index} className="bg-white rounded-lg shadow-sm border border-moss-olive/10 overflow-hidden hover:shadow-md transition-shadow duration-300">
+                  <div className="p-5 sm:p-6">
+                    <div className="text-xs sm:text-sm text-moss-olive mb-2">{article.category}</div>
+                    <h3 className="font-mortuary text-lg sm:text-xl mb-2 sm:mb-3">{article.title}</h3>
+                    <p className="mb-3 sm:mb-4 text-sm sm:text-base text-forest-charcoal/80 line-clamp-3">{article.excerpt}</p>
+                    <Link href={article.slug} className="text-sm sm:text-base text-moss-olive hover:underline inline-flex items-center">
                       Read More →
                     </Link>
                   </div>
@@ -118,19 +118,19 @@ export default function ResourcesPage() {
           </div>
           
           <div id="faq">
-            <h2 className="text-2xl md:text-3xl font-mortuary mb-8 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-2xl sm:text-3xl font-mortuary mb-6 sm:mb-8 text-center">Frequently Asked Questions</h2>
             <FAQAccordion items={faqItems} />
           </div>
         </div>
       </section>
       
-      <section className="w-full bg-forest-charcoal text-soft-ivory py-16">
+      <section className="w-full bg-forest-charcoal text-soft-ivory py-12 sm:py-16">
         <div className="container-custom text-center">
-          <h2 className="text-2xl md:text-3xl font-mortuary mb-6">Have a Question We Haven't Answered?</h2>
-          <p className="mb-8 max-w-2xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-mortuary mb-4 sm:mb-6 px-4 sm:px-0">Have a Question We Haven't Answered?</h2>
+          <p className="mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base px-4 sm:px-0">
             Our team is here to provide personalized guidance for your specific situation.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <Button href="/consultation" variant="primary">Schedule a Consultation</Button>
             <Button href="/#contact" variant="outline">Contact Us</Button>
           </div>

@@ -50,13 +50,15 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link
                 href="/consultation"
-                className="px-10 py-4 text-base font-light tracking-wide bg-soft-parchment text-charred-plum rounded hover:bg-pale-stone transition-all duration-300"
+                className="px-7 py-2.5 text-base font-light tracking-wide bg-soft-parchment text-charred-plum hover:bg-pale-stone transition-all duration-300"
+                style={{ borderRadius: '12px' }}
               >
                 Begin your journey
               </Link>
               <Link
                 href="/resources/family-guide"
-                className="px-10 py-4 text-base font-light tracking-wide border-2 border-pale-stone/60 text-pale-stone rounded hover:bg-pale-stone/10 transition-all duration-300"
+                className="px-7 py-2.5 text-base font-light tracking-wide border-2 border-pale-stone/60 text-pale-stone hover:bg-pale-stone/10 transition-all duration-300"
+                style={{ borderRadius: '12px' }}
               >
                 Download family guide
               </Link>
@@ -405,72 +407,91 @@ export default function Home() {
       </section>
       
       {/* Contact section */}
-      <section id="contact" className="w-full bg-soft-parchment py-20">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center text-charred-plum">Contact & Location</h2>
-          <p className="text-xl max-w-4xl mx-auto text-center mb-12 text-deep-slate/80">
+      <section id="contact" className="w-full bg-charred-plum py-20 relative overflow-hidden">
+        <div className="absolute inset-6 md:inset-8 z-0 rounded-2xl" style={{ border: '0.5px solid rgba(200, 194, 184, 0.5)' }}>
+          <div className="absolute inset-px rounded-2xl bg-charred-plum overflow-hidden"></div>
+        </div>
+        <div className="container-custom relative z-10">
+          <h2 className="text-3xl md:text-5xl font-heading mb-10 text-center text-pale-stone">Contact & Location</h2>
+          <p className="text-xl max-w-4xl mx-auto text-center mb-12 text-pale-stone/90">
             Have questions or ready to begin? Reach out today.
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
-              <h3 className="text-2xl font-heading mb-6 text-charred-plum">Schedule a Consultation</h3>
-              <ul className="space-y-4 text-deep-slate/80">
+              <h3 className="text-2xl font-heading mb-6 text-pale-stone">Schedule a Consultation</h3>
+              <ul className="space-y-4 text-pale-stone/80">
                 <li className="flex items-start">
-                  <span className="font-medium mr-2 text-charred-plum">Phone:</span> (212) 555‑1234
+                  <span className="font-medium mr-2 text-pale-stone">Phone:</span> (212) 555‑1234
                 </li>
                 <li className="flex items-start">
-                  <span className="font-medium mr-2 text-charred-plum">Email:</span> hello@evermorefuneral.com
+                  <span className="font-medium mr-2 text-pale-stone">Email:</span> hello@evermorefuneral.com
                 </li>
                 <li className="flex items-start">
-                  <span className="font-medium mr-2 text-charred-plum">Hours:</span> Mon–Fri, 9 AM–6 PM ET
+                  <span className="font-medium mr-2 text-pale-stone">Hours:</span> Mon–Fri, 9 AM–6 PM ET
                 </li>
                 <li className="flex items-start mt-6">
-                  <span className="font-medium mr-2 text-charred-plum">Office:</span> Serving the NYC metro area and beyond
+                  <span className="font-medium mr-2 text-pale-stone">Office:</span> Serving the NYC metro area and beyond
                 </li>
               </ul>
               
               <div className="mt-8">
-                <Button href="/consultation" variant="primary">Book a Consultation Online</Button>
+                <Link
+                  href="/consultation"
+                  className="inline-block px-8 py-3 text-base font-light tracking-wide bg-soft-parchment text-charred-plum rounded-full border-2 border-soft-parchment hover:bg-pale-stone hover:border-pale-stone transition-all duration-300"
+                  style={{ borderRadius: '12px' }}
+                >
+                  Book a Consultation Online
+                </Link>
               </div>
             </div>
             
             <div>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block mb-1 text-deep-slate">Name</label>
+                  <label htmlFor="name" className="block mb-1 text-pale-stone">Name</label>
                   <input 
                     type="text" 
                     id="name" 
-                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
+                    placeholder="Your name"
+                    className="w-full p-3 border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block mb-1 text-deep-slate">Email</label>
+                  <label htmlFor="email" className="block mb-1 text-pale-stone">Email</label>
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
+                    placeholder="your.email@example.com"
+                    className="w-full p-3 border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block mb-1 text-deep-slate">Phone</label>
+                  <label htmlFor="phone" className="block mb-1 text-pale-stone">Phone</label>
                   <input 
                     type="tel" 
                     id="phone" 
-                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
+                    placeholder="(212) 555-1234"
+                    className="w-full p-3 border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block mb-1 text-deep-slate">How can we help?</label>
+                  <label htmlFor="message" className="block mb-1 text-pale-stone">How can we help?</label>
                   <textarea 
                     id="message" 
                     rows={4} 
-                    className="w-full p-3 border border-charred-plum/30 rounded-lg bg-soft-parchment focus:border-charred-plum focus:outline-none"
+                    placeholder="Tell us how we can assist you..."
+                    className="w-full p-3 border border-pale-stone/30 rounded-lg bg-transparent focus:border-pale-stone focus:outline-none text-pale-stone placeholder:text-pale-stone/60"
                   ></textarea>
                 </div>
                 <div>
-                  <Button variant="primary" type="submit">Send Message</Button>
+                  <button
+                    type="submit"
+                    className="px-8 py-3 text-base font-light tracking-wide bg-soft-parchment text-charred-plum rounded-full border-2 border-soft-parchment hover:bg-pale-stone hover:border-pale-stone transition-all duration-300"
+                    style={{ borderRadius: '12px' }}
+                  >
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>

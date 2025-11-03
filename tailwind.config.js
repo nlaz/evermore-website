@@ -12,6 +12,8 @@ module.exports = {
         'golden-ochre': '#AF8E5C',      // Primary accent - RGB(175, 142, 92)
         'midnight-moss': '#273229',      // Dark foundation - RGB(39, 50, 41)
         'charred-plum': '#362630',       // Rich dark accent - RGB(54, 38, 48)
+        'deep-plum': '#2A1D26',          // Darker plum variant - RGB(42, 29, 38)
+        'darkest-plum': '#1F151B',       // Darkest plum variant - RGB(31, 21, 27)
 
         // Supporting Palette
         'soft-parchment': '#D8C8B8',     // Light background - RGB(216, 200, 184)

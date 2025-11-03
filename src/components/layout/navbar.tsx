@@ -31,12 +31,14 @@ export default function Navbar() {
   }, [scrolled]);
 
   return (
-    <nav className={`w-full fixed top-0 z-50 transition-all duration-500 ${
+    <nav className={`w-full fixed top-0 z-50 transition-all duration-700 ease-out ${
       scrolled
-        ? 'bg-charred-plum/95 backdrop-blur-sm border-b border-pale-stone/10'
+        ? 'bg-charred-plum/95 backdrop-blur-sm border-b border-pale-stone/10 shadow-lg shadow-charred-plum/20'
         : 'bg-transparent'
     }`}>
-      <div className="container-custom flex items-center justify-between pt-12 md:pt-16 pb-6">
+      <div className={`container-custom flex items-center justify-between transition-all duration-700 ease-out ${
+        scrolled ? 'py-4' : 'pt-12 md:pt-16 pb-6'
+      }`}>
         <Link href="/" aria-label="Evermore Home" className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-pale-stone/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-sm blur-sm"></div>
           <Image
@@ -45,7 +47,9 @@ export default function Navbar() {
             width={220}
             height={60}
             priority
-            className="h-auto relative transition-all duration-500"
+            className={`h-auto relative transition-all duration-700 ease-out ${
+              scrolled ? 'scale-90' : 'scale-100'
+            }`}
             style={{ filter: 'brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(378%) hue-rotate(350deg) brightness(97%) contrast(86%)' }}
           />
         </Link>

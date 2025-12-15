@@ -12,6 +12,7 @@ export default function SubpagesShell({ children }: { children: React.ReactNode 
   const pathname = usePathname();
 
   const isConnect = pathname === '/connect';
+  const isGuidesIndex = pathname === '/guides';
   const isGuideDetail = pathname.startsWith('/guides/');
   const isAbout = pathname === '/about';
 
@@ -21,13 +22,19 @@ export default function SubpagesShell({ children }: { children: React.ReactNode 
 
   const wrapperClassName = useMemo(() => {
     if (isConnect) return 'min-h-screen bg-soft-parchment text-deep-plum flex flex-col';
-    if (isGuideDetail) return 'min-h-screen bg-pale-stone text-deep-plum flex flex-col';
+    if (isGuideDetail) return 'min-h-screen bg-bone text-deep-plum flex flex-col';
     return 'min-h-screen bg-deep-plum text-soft-parchment flex flex-col';
   }, [isConnect, isGuideDetail]);
 
   // Default subpages are intentionally narrow, but About needs room for the
   // full-width hero rhythm + decorative florals.
-  const mainMaxWidthClassName = isGuideDetail ? 'max-w-5xl' : isAbout ? 'max-w-7xl' : 'max-w-4xl';
+  const mainMaxWidthClassName = isGuideDetail
+    ? 'max-w-5xl'
+    : isAbout
+      ? 'max-w-7xl'
+      : isGuidesIndex
+        ? 'max-w-[1720px]'
+        : 'max-w-4xl';
 
   return (
     <div className={wrapperClassName}>

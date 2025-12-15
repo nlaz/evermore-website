@@ -1,20 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-type ServiceCardVariant = 'featured' | 'outline';
+import { FlowerIcon } from '@/components/icons/flower';
 
-function FlowerMark({ className }: { className?: string }) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className={className ?? 'h-4 w-4'}
-      fill="currentColor"
-    >
-      <path d="M12 2.9c1.6 0 2.9 1.3 2.9 2.9 0 .6-.2 1.2-.5 1.6.4-.1.8-.2 1.2-.2 1.6 0 2.9 1.3 2.9 2.9 0 1-.5 1.9-1.3 2.4 1.3.3 2.2 1.5 2.2 2.9 0 1.6-1.3 2.9-2.9 2.9-.7 0-1.3-.2-1.8-.6.1.3.2.7.2 1.1 0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9c0-.4.1-.8.2-1.1-.5.4-1.1.6-1.8.6-1.6 0-2.9-1.3-2.9-2.9 0-1.4 1-2.6 2.2-2.9-.8-.5-1.3-1.4-1.3-2.4 0-1.6 1.3-2.9 2.9-2.9.4 0 .8.1 1.2.2-.3-.5-.5-1-.5-1.6C9.1 4.2 10.4 2.9 12 2.9z" />
-    </svg>
-  );
-}
+type ServiceCardVariant = 'featured' | 'outline';
 
 export function ServiceCard({
   title,
@@ -50,7 +39,7 @@ export function ServiceCard({
       <div className="p-7 sm:p-8 md:p-9 flex flex-col h-full">
         <div className="flex items-start justify-between">
           <div className={metaText}>
-            <FlowerMark className="h-[18px] w-[18px]" />
+            <FlowerIcon className="h-[18px] w-[18px]" />
           </div>
         </div>
 

@@ -7,7 +7,7 @@ import { getAssetPath } from '@/utils/asset-path';
 
 export default function SubpageFooter() {
   return (
-    <footer className="mt-24 bg-soft-parchment text-deep-plum">
+    <footer className="mt-24 bg-bone text-deep-plum">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-10 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5 space-y-6">

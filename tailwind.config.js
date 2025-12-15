@@ -16,6 +16,7 @@ module.exports = {
         'darkest-plum': '#1F151B',       // Darkest plum variant - RGB(31, 21, 27)
 
         // Supporting Palette
+        'bone': '#DCD6CD',              // Bone - RGB(220, 214, 205)
         'soft-parchment': '#D8C8B8',     // Light background - RGB(216, 200, 184)
         'stone-sage': '#5A685C',         // Muted green - RGB(90, 104, 92)
         'deep-slate': '#333E4E',         // Cool dark - RGB(51, 62, 78)

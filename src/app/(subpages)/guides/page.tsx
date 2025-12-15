@@ -15,12 +15,12 @@ function FloralMark() {
     <div aria-hidden="true" className="pointer-events-none hidden lg:block">
       <div className="sticky top-28">
         <Image
-          src="/images/forget-me-nots.png"
+          src="/images/forget-me-not-2.png"
           alt=""
-          width={250}
-          height={658}
-          sizes="(min-width: 1024px) 200px, 0px"
-          className="h-auto w-[180px] opacity-70"
+          width={184}
+          height={766}
+          sizes="(min-width: 1024px) 90px, 0px"
+          className="h-auto w-[90px] opacity-70"
           priority
         />
       </div>
@@ -31,14 +31,14 @@ function FloralMark() {
 export default function GuidesPage() {
   return (
     <section className="relative">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
+      <div className="w-full">
         <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-16">
-          <aside className="hidden lg:block">
+          <aside className="hidden lg:flex justify-center">
             <FloralMark />
           </aside>
 
-          <div className="space-y-14 lg:justify-self-center lg:max-w-3xl">
-            <header className="space-y-8 text-center mx-auto max-w-3xl">
+          <div className="space-y-14 lg:justify-self-center lg:w-full">
+            <header className="mx-auto max-w-[928px] space-y-8 text-center">
               <p className="text-soft-parchment/65 text-sm font-light tracking-[0.14em] uppercase">This library is for you</p>
               <div className="space-y-5">
                 <p className="text-soft-parchment/70 font-light leading-relaxed">
@@ -55,7 +55,7 @@ export default function GuidesPage() {
               </h1>
             </header>
 
-            <div className="mx-auto w-full max-w-5xl">
+            <div className="mx-auto w-full max-w-[1605px]">
               <div className="border-t border-soft-parchment/15">
                 {GUIDES.map((guide) => (
                   <Link

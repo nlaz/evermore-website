@@ -95,7 +95,7 @@ export default function GuidePage({ params }: PageProps) {
       <div className="pt-2">
         <Link
           href="/guides"
-          className="inline-flex text-xs tracking-[0.18em] uppercase text-deep-plum/70 hover:text-deep-plum focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-plum/25 focus-visible:ring-offset-4 focus-visible:ring-offset-pale-stone"
+          className="inline-flex text-xs tracking-[0.18em] uppercase text-deep-plum/70 hover:text-deep-plum focus:outline-none focus-visible:ring-2 focus-visible:ring-deep-plum/25 focus-visible:ring-offset-4 focus-visible:ring-offset-bone"
         >
           Return to Guides
         </Link>

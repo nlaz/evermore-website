@@ -2,9 +2,18 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Evermore | Funeral Coordination, Planning & Support',
-  description: 'Holistic funeral planning that frees you to grieve, reflect, and heal.',
-  keywords: ['funeral planning', 'funeral coordination', 'funeral support', 'funeral services'],
+  title: {
+    default: 'Evermore',
+    template: '%s | Evermore',
+  },
+  description: 'Human-first support for modern, meaningful farewells.',
+  keywords: [
+    'funeral planning',
+    'funeral coordination',
+    'end-of-life planning',
+    'bereavement support',
+    'memorial services',
+  ],
   robots: {
     index: true,
     follow: true,
@@ -12,15 +21,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://evermore-website.vercel.app',
-    title: 'Evermore | Funeral Coordination, Planning & Support',
-    description: 'Holistic funeral planning that frees you to grieve, reflect, and heal.',
+    title: 'Evermore',
+    description: 'Human-first support for modern, meaningful farewells.',
     siteName: 'Evermore',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Evermore | Funeral Coordination, Planning & Support',
-    description: 'Holistic funeral planning that frees you to grieve, reflect, and heal.',
+    title: 'Evermore',
+    description: 'Human-first support for modern, meaningful farewells.',
   },
 };
 
